@@ -12,6 +12,7 @@
         <div class="container">
             <nav>
                 <div class="logo">RapidAccess ★  </div>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
@@ -158,5 +159,25 @@
             <p>&copy; 2024 RapidAccess. All rights reserved, Made with ❤️ by Lurey.</p>
         </div>
     </footer>
+    <script>
+        // Select toggle button and nav menu
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+        const navLinks = document.querySelectorAll('nav ul li a');
+    
+        // Toggle menu visibility
+        toggleButton.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+    
+    
 </body>
 </html>
